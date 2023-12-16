@@ -43,12 +43,19 @@ function paused() {
 
 }
 function reset() {
+    hr = 0;
+    min = 0;
+    sec = 0;
+    ms = 0;
 
-    hrHeading.innerHTML = 0;
-    minHeading.innerHTML = 0;
-    secHeading.innerHTML = 0;
-    msHeading.innerHTML = 0;
-    paused()
+
+
+    hrHeading.innerHTML = hr;
+    minHeading.innerHTML = min;
+    secHeading.innerHTML = sec;
+    msHeading.innerHTML = ms;
+    clearInterval(interval)
     startBtn.disabled = false;
     pausedBtn.disabled = false;
+
 }
